@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+body::before {
+    background-image: url('Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    content: "";
+    /* filter: grayscale(100%) brightness(0.2) invert(); */
+}
+
+body {
+    background-color: #394DFF;
+    font-family: 'Open Sans', sans-serif;
+    /* filter: invert(); */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    background-color: #ffffff;
+    width: 26vw;
+    padding: 2em;
+    border-radius: 8px;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 610%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+h1, h2, h3 {
+    text-align: left;
+}
+
+p.footer {
+    margin-top: auto;
+    color: #AEAEAE;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+.row.input {
+    background: #E9E9E9;
+    border-radius: 8px;
+    width: 100%;
+    height: initial;
+}
+
+.row.input input {
+    flex-basis: 80%;
+    padding: 1em;
+    font-weight: 800;
+    border: none;
+    background: #E9E9E9;
+    border-radius: 8px 0 0 8px;
+}
+
+.row.input i {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    padding: 1em;
+    text-align: center;
+}
+
+input::placeholder, .input i {
+    color: #000;
+    opacity: 0.25;
+}
+
+a {
+    color: #909090;
+}
+
+p.fixedfooter {
+    position: fixed;
+    color: #fff;
+    font-weight: 600;
+    font-size: 90%;
+    bottom: 1.5em;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+p.fixedfooter a {
+    color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+    .box {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .box {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .box {
+        width: 70vw;
+    }
+}
