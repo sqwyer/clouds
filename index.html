@@ -12,20 +12,43 @@
     <script src="https://kit.fontawesome.com/216fc4615f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="row">
+    <div class="row col">
         <div class="box">
             <div class="row input">
                 <input id="query" value="New York City" name="search" placeholder="Enter ZIP Code">
                 <i class='fas fa-arrow-right' onclick="get()"></i>
             </div>
             <br />
-            <h2 id="name">Name</h1>
+            <h2><img id="icon"><span id="name">Name</span></h1>
             <h3><span id="region">Region</span>, <span id="country">Country</h2>
             <h1><span id="temp">00</span>˚</h1>
-            <p class="footer">Weather data provided by <a href="https://www.weatherapi.com/" target="blank">Weather API</a>.</p>
+            <p id="desc"></p>
+            <div id="forecast">
+                <label>2 Day Forecast</label>
+                <div class="fc_day">
+                    <label class="flex">
+                        <img id="fc_d1_ico">
+                        <span id="fc_d1_day">Day</span>
+                        <span class="high" id="fc_d1_high">00˚</span>
+                        <span class="low"  id="fc_d1_low">00˚</span>
+                        <span class="rain"  id="fc_d1_rain">0% Chance Precipitation</span>
+                    </label>
+                </div>
+                <div class="fc_day">
+                    <label class="flex">
+                        <img id="fc_d2_ico">
+                        <span id="fc_d2_day">Day</span>
+                        <span class="high" id="fc_d2_high">00˚</span>
+                        <span class="low" id="fc_d2_low">00˚</span>
+                        <span class="rain"  id="fc_d2_rain">0% Chance Precipitation</span>
+                    </label>
+                </div>
+            </div>
+            <br />
+            <p class="footer">Degrees provided in fahrenheit.<br />Weather data provided by <a href="https://www.weatherapi.com/" target="blank">Weather API</a>.</p>
         </div>
+        <p class="fixedfooter">Made with &lt;3 on <a href="https://github.com/sqwyer/clouds" target="blank">Github</a>.</p>
     </div>
-    <p class="fixedfooter">Made with &lt;3 on <a href="https://github.com/sqwyer/clouds" target="blank">Github</a>.</p>
     <script src="static/script.js"></script>
 </body>
 </html>

@@ -24,6 +24,10 @@ body {
     /* filter: invert(); */
 }
 
+.flex {
+    display: flex;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -32,7 +36,7 @@ body {
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .box {
@@ -50,7 +54,7 @@ h1 {
 }
 
 h2 {
-    font-size: 200%;
+    font-size: 170%;
 }
 
 h1, h2 {
@@ -71,12 +75,17 @@ p.footer {
     font-weight: 600;
     font-size: 90%;
 }
+.col:first-of-type {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 1em;
+}
 
 .row.input {
     background: #E9E9E9;
     border-radius: 8px;
     width: 100%;
-    height: initial;
+    min-height: initial;
 }
 
 .row.input input {
@@ -106,13 +115,14 @@ a {
 }
 
 p.fixedfooter {
-    position: fixed;
+    margin-top: auto;
+    /* position: fixed; */
     color: #fff;
     font-weight: 600;
     font-size: 90%;
-    bottom: 1.5em;
-    left: 0;
-    right: 0;
+    margin-bottom: 1.5em;
+    /* left: 0;
+    right: 0; */
     text-align: center;
 }
 
@@ -120,9 +130,66 @@ p.fixedfooter a {
     color: #fff;
 }
 
+#icon {
+    margin-right: 0.1em;
+}
+
+#desc {
+    color: #909090;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+}
+
+#forecast {
+    margin-top: 1em;
+}
+
+#forecast label {
+    font-weight: 800;
+}
+
+.fc_day {
+    display: flex;
+    border-bottom: 2.5px solid #eee;
+    padding: 1em 0;
+}
+
+.fc_day label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.high {
+    font-weight: 600;
+}
+
+.low {
+    color: #909090;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1300px) {
+    .box {
+        width: 30vw;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .box {
         width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .box {
+        width: 40vw;
     }
 }
 
@@ -135,5 +202,11 @@ p.fixedfooter a {
 @media only screen and (max-width: 800px) {
     .box {
         width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        width: 90vw;
     }
 }
