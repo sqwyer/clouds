@@ -1,4 +1,4 @@
-let week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
 
 async function get (val) {
     if(!val) val = document.getElementById('query').value;
